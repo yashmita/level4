@@ -8,8 +8,8 @@
  * Date: Mon Jan 30 2012
  */
 
-(function( $, undefined ) {
-    
+// (function( $, undefined ) {
+    $(document).ready(function(){
     /*
      * Gallery object.
      */
@@ -519,4 +519,4 @@
         
     };
     
-})( jQuery );
+});
