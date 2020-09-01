@@ -8,6 +8,9 @@
  * Date: Mon Jan 30 2012
  */
 
+$(function() {
+				$('#dg-container').gallery();
+			});
 (function( $, undefined ) {
     
     /*
