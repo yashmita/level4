@@ -9,6 +9,7 @@
  */
 
 // (function( $, undefined ) {
+$.noConflict();
     $(document).ready(function(){
     /*
      * Gallery object.
