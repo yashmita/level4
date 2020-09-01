@@ -58,7 +58,7 @@ section, header{
 body{
   font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
   /*background: #333 url(../images/bg.jpg) repeat top left;*/
-  background: url("https://vignette3.wikia.nocookie.net/harrypotter/images/0/01/The_Maze_%28Triwizard_Tournament_3rd_Task_Concept_Artwork%29.png/revision/latest?cb=20091021091251") no-repeat center center fixed;
+  background: url("//vignette3.wikia.nocookie.net/harrypotter/images/0/01/The_Maze_%28Triwizard_Tournament_3rd_Task_Concept_Artwork%29.png/revision/latest?cb=20091021091251") no-repeat center center fixed;
   background-size: cover;
   font-weight: 400;
   font-size: 15px;
