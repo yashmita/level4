@@ -1,0 +1,933 @@
+body{
+    background: url("http://vignette3.wikia.nocookie.net/harrypotter/images/0/01/The_Maze_%28Triwizard_Tournament_3rd_Task_Concept_Artwork%29.png/revision/latest?cb=20091021091251")  no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /*********************HEADING**************************/
+  
+  .heading{
+    background-color: rgba(0, 100, 120, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    /* background-image: url(""); */
+  }
+  
+  /***************************DOORS**************************/
+  
+  .door1, .door2, .door3, .door4 {
+    width: normal;
+    height: 200px;
+    position: absolute;
+    margin-top: 50px;
+    /* -moz-box-shadow:   onset 0 0 10px #000000;
+  -webkit-box-shadow: onset 0 0 10px #000000;
+  box-shadow:         onset 0 0 10px #000000; */
+
+  /* border: 3px solid rgba(133, 91, 76, 0.5); */
+  }
+  .door1 {
+    margin-left: 30px;
+  }
+  .door2 {
+    margin-left: 360px;
+  }
+  .door3 {
+    margin-left: 690px;
+  }
+  .door4 {
+    margin-left: 1020px;
+
+  }
+  
+   
+  .door1.hover1, .door2.hover2, .door3.hover3, .door4.hover4{
+
+    /* animation: slide 1s linear; */
+    animation: example 8s 1;
+  }
+  
+  
+  .door1 img, .door2 img, .door3 img, .door4 img {
+    /* width: 500px; */
+    height: 450px;
+  }
+  .door1__left, .door2__left, .door3__left, .door4__left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .door1__left.hover1, .door2__left.hover2, .door3__left.hover3, .door4__left.hover4 {
+    animation: leftSlide 3s linear;
+  }
+  
+  .door1__right, .door2__right, .door3__right, .door4__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .door1__right.hover1, .door2__right.hover2, .door3__right.hover3, .door4__right.hover4 {
+    animation: rightSlide 3s linear;
+}
+@keyframes example {
+  from {
+    -webkit-transform: perspective(300) rotateY(0deg);
+    -webkit-transform-origin: 0% 0%;
+ }
+ to {
+    -webkit-transform: perspective(300) rotateY(45deg);
+     -webkit-transform-origin: 0% 0%;
+ }
+}
+/* @keyframes rota {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    50% {
+      left: 150px;
+      top: 0px;
+    }
+    100% {
+      /* left: 488px;
+      top: 0px; */
+    }
+  }  */
+  
+  /*****************************RIDDLES*************************/
+  /* riddle 1 */
+
+   .snitch{
+   width: 720px;
+    height: 500px;
+    margin: 150px auto auto auto;
+    position: relative;
+   }
+  .riddle1
+  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .riddle1 .snitch {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 190px;
+    /* cursor: pointer; */
+  }
+  
+  .riddle1 .snitch .obj {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -130px;
+    top: 0;
+    transition: all ease 0.5s;
+    z-index: 1;
+  }
+  
+  .riddle1 #animate:checked + label .snitch .obj {
+    top: -8em;
+    /* margin-right: 40px */
+    animation: hover ease-in-out 1.5s infinite;
+  }
+  
+  .riddle1 .snitch .obj .body {
+    position: static;
+    overflow: hidden;
+    margin-top: 150px;
+    width: 230%;
+    height: 220%;
+    border-radius: 50%;
+    background: #efbf65;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.6em;
+  }
+  
+  .riddle1 .snitch .obj .wing {
+    position: absolute;
+    text-align: right;
+    line-height: 0;
+    top: -60%;
+    left: -175%;
+    width: 200%;
+    height: 90%;
+    transform-origin: bottom right;
+  }
+  
+  .riddle1 .snitch .obj .r.wing {
+    text-align: left;
+    left: auto;
+    right: -300%;
+    transform-origin: bottom left;
+  }
+  
+  .riddle1 #animate:checked + label .snitch .obj .wing {
+    animation: flap-left ease-in-out 0.3s infinite;
+  }
+  
+  .riddle1 #animate:checked + label .snitch .obj .r.wing {
+    animation: flap-right ease-in-out 0.3s infinite;
+  }
+  
+  .riddle1 .snitch .obj .wing .feather {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    margin-top: -1px;
+    background: #fdfce6;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.62em;
+    border-radius: 0 2em 0 2em;
+  }
+  
+  .riddle1 .snitch .obj .wing .feather:nth-child(2) {
+    height: 33%;
+    width: 85%;
+    border-top: none;
+    border-radius: 0 0 0 2em;
+  }
+  
+  .riddle1 .snitch .obj .wing .feather:nth-child(3) {
+    height: 33%;
+    width: 70%;
+    border-radius: 0 0 0 2em;
+    border-top: none;
+  }
+  
+  .riddle1 .snitch .obj .r.wing .feather {
+    border-radius: 0 0 2em 0;
+  }
+  
+  .riddle1 .snitch .obj .r.wing .feather:nth-child(1) {
+    border-radius: 2em 0 2em 0;
+  }
+  
+  .riddle1 .snitch .shadow {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 0%);
+    height: 0;
+    width: 0;
+    background: #3c2e2d;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all ease 0.5s;
+  }
+  
+  .riddle1 #animate:checked + label .snitch .shadow {
+    opacity: .65;
+    height: 10%;
+    left: calc(50% - 25%);
+    width: 50%;
+    animation: shadow-hover ease-in-out 1.5s infinite;
+  }
+  
+  @keyframes flap-left {
+    50% {
+      transform: rotate(-40deg) scaley(0.6);
+    }
+  }
+  @keyframes flap-right {
+    50% {
+      transform: rotate(40deg) scaley(0.6);
+    }
+  }
+  @keyframes hover {
+    50% {
+      transform: translatey(-1.2em);
+    }
+  }
+  @keyframes shadow-hover {
+    50% {
+      transform: scale(1.1);
+      opacity: .5;
+    }
+  }
+  @media (max-width: 750px) {
+    .riddle1 .snitch {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .riddle1 .snitch .obj .body, .snitch .obj .wing .feather, .snitch .obj .joint {
+      border-width: 0.4em;
+    }
+  
+    .riddle1 .snitch .obj .body .flourish {
+      border: solid 0.42em #3c2e2d;
+      border-width: 0.3em;
+    }
+  
+    .riddle1 .snitch .obj .body .flourish .line {
+      height: 0.3em;
+    }
+  }
+
+  /* riddle4*/
+  .riddle4
+  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .riddle4 .snitch {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 190px;
+    /* cursor: pointer; */
+  }
+  
+  .riddle4 .snitch .obj {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -130px;
+    top: 0;
+    transition: all ease 0.5s;
+    z-index: 1;
+  }
+  
+  .riddle4 #animate:checked + label .snitch .obj {
+    top: -8em;
+    /* margin-right: 40px */
+    animation: hover ease-in-out 1.5s infinite;
+  }
+  
+  .riddle4 .snitch .obj .body {
+    position: static;
+    overflow: hidden;
+    margin-top: 150px;
+    width: 230%;
+    height: 220%;
+    border-radius: 50%;
+    background: #efbf65;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.6em;
+  }
+  
+  .riddle4 .snitch .obj .wing {
+    position: absolute;
+    text-align: right;
+    line-height: 0;
+    top: -60%;
+    left: -175%;
+    width: 200%;
+    height: 90%;
+    transform-origin: bottom right;
+  }
+  
+  .riddle4 .snitch .obj .r.wing {
+    text-align: left;
+    left: auto;
+    right: -300%;
+    transform-origin: bottom left;
+  }
+  
+  .riddle4 #animate:checked + label .snitch .obj .wing {
+    animation: flap-left ease-in-out 0.3s infinite;
+  }
+  
+  .riddle4 #animate:checked + label .snitch .obj .r.wing {
+    animation: flap-right ease-in-out 0.3s infinite;
+  }
+  
+  .riddle4 .snitch .obj .wing .feather {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    margin-top: -1px;
+    background: #fdfce6;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.62em;
+    border-radius: 0 2em 0 2em;
+  }
+  
+  .riddle4 .snitch .obj .wing .feather:nth-child(2) {
+    height: 33%;
+    width: 85%;
+    border-top: none;
+    border-radius: 0 0 0 2em;
+  }
+  
+  .riddle4 .snitch .obj .wing .feather:nth-child(3) {
+    height: 33%;
+    width: 70%;
+    border-radius: 0 0 0 2em;
+    border-top: none;
+  }
+  
+  .riddle4 .snitch .obj .r.wing .feather {
+    border-radius: 0 0 2em 0;
+  }
+  
+  .riddle4 .snitch .obj .r.wing .feather:nth-child(1) {
+    border-radius: 2em 0 2em 0;
+  }
+  
+  .riddle4 .snitch .shadow {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 0%);
+    height: 0;
+    width: 0;
+    background: #3c2e2d;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all ease 0.5s;
+  }
+  
+  .riddle4 #animate:checked + label .snitch .shadow {
+    opacity: .65;
+    height: 10%;
+    left: calc(50% - 25%);
+    width: 50%;
+    animation: shadow-hover ease-in-out 1.5s infinite;
+  }
+  
+  @keyframes flap-left {
+    50% {
+      transform: rotate(-40deg) scaley(0.6);
+    }
+  }
+  @keyframes flap-right {
+    50% {
+      transform: rotate(40deg) scaley(0.6);
+    }
+  }
+  @keyframes hover {
+    50% {
+      transform: translatey(-1.2em);
+    }
+  }
+  @keyframes shadow-hover {
+    50% {
+      transform: scale(1.1);
+      opacity: .5;
+    }
+  }
+  @media (max-width: 750px) {
+    .riddle4 .snitch {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .riddle4 .snitch .obj .body, .snitch .obj .wing .feather, .snitch .obj .joint {
+      border-width: 0.4em;
+    }
+  
+    .riddle4 .snitch .obj .body .flourish {
+      border: solid 0.42em #3c2e2d;
+      border-width: 0.3em;
+    }
+  
+    .riddle4 .snitch .obj .body .flourish .line {
+      height: 0.3em;
+    }
+  }
+  /*riddle 3*/
+  .riddle3
+  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .riddle3 .snitch {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 190px;
+    /* cursor: pointer; */
+  }
+  
+  .riddle3 .snitch .obj {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -130px;
+    top: 0;
+    transition: all ease 0.5s;
+    z-index: 1;
+  }
+  
+  .riddle3 #animate:checked + label .snitch .obj {
+    top: -8em;
+    /* margin-right: 40px */
+    animation: hover ease-in-out 1.5s infinite;
+  }
+  
+  .riddle3 .snitch .obj .body {
+    position: static;
+    overflow: hidden;
+    margin-top: 150px;
+    width: 230%;
+    height: 220%;
+    border-radius: 50%;
+    background: #efbf65;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.6em;
+  }
+  
+  .riddle3 .snitch .obj .wing {
+    position: absolute;
+    text-align: right;
+    line-height: 0;
+    top: -60%;
+    left: -175%;
+    width: 200%;
+    height: 90%;
+    transform-origin: bottom right;
+  }
+  
+  .riddle3 .snitch .obj .r.wing {
+    text-align: left;
+    left: auto;
+    right: -300%;
+    transform-origin: bottom left;
+  }
+  
+  .riddle3 #animate:checked + label .snitch .obj .wing {
+    animation: flap-left ease-in-out 0.3s infinite;
+  }
+  
+  .riddle3 #animate:checked + label .snitch .obj .r.wing {
+    animation: flap-right ease-in-out 0.3s infinite;
+  }
+  
+  .riddle3 .snitch .obj .wing .feather {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    margin-top: -1px;
+    background: #fdfce6;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.62em;
+    border-radius: 0 2em 0 2em;
+  }
+  
+  .riddle3 .snitch .obj .wing .feather:nth-child(2) {
+    height: 33%;
+    width: 85%;
+    border-top: none;
+    border-radius: 0 0 0 2em;
+  }
+  
+  .riddle3 .snitch .obj .wing .feather:nth-child(3) {
+    height: 33%;
+    width: 70%;
+    border-radius: 0 0 0 2em;
+    border-top: none;
+  }
+  
+  .riddle3 .snitch .obj .r.wing .feather {
+    border-radius: 0 0 2em 0;
+  }
+  
+  .riddle3 .snitch .obj .r.wing .feather:nth-child(1) {
+    border-radius: 2em 0 2em 0;
+  }
+  
+  .riddle3 .snitch .shadow {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 0%);
+    height: 0;
+    width: 0;
+    background: #3c2e2d;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all ease 0.5s;
+  }
+  
+  .riddle3 #animate:checked + label .snitch .shadow {
+    opacity: .65;
+    height: 10%;
+    left: calc(50% - 25%);
+    width: 50%;
+    animation: shadow-hover ease-in-out 1.5s infinite;
+  }
+  
+  @keyframes flap-left {
+    50% {
+      transform: rotate(-40deg) scaley(0.6);
+    }
+  }
+  @keyframes flap-right {
+    50% {
+      transform: rotate(40deg) scaley(0.6);
+    }
+  }
+  @keyframes hover {
+    50% {
+      transform: translatey(-1.2em);
+    }
+  }
+  @keyframes shadow-hover {
+    50% {
+      transform: scale(1.1);
+      opacity: .5;
+    }
+  }
+  @media (max-width: 750px) {
+    .riddle3 .snitch {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .riddle3 .snitch .obj .body, .snitch .obj .wing .feather, .snitch .obj .joint {
+      border-width: 0.4em;
+    }
+  
+    .riddle3 .snitch .obj .body .flourish {
+      border: solid 0.42em #3c2e2d;
+      border-width: 0.3em;
+    }
+  
+    .riddle3 .snitch .obj .body .flourish .line {
+      height: 0.3em;
+    }
+  }
+  /*riddle2 */
+  .riddle2
+  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .riddle2 .snitch {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    /* cursor: pointer; */
+  }
+  
+  .riddle2 .snitch .obj {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -130px;
+    top: 0;
+    transition: all ease 0.5s;
+    z-index: 1;
+  }
+  
+  .riddle2 #animate:checked + label .snitch .obj {
+    top: -8em;
+    /* margin-right: 40px */
+    animation: hover ease-in-out 1.5s infinite;
+  }
+  
+  .riddle2 .snitch .obj .body {
+    position: static;
+    overflow: hidden;
+    margin-top: 150px;
+    width: 230%;
+    height: 220%;
+    border-radius: 50%;
+    background: #efbf65;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.6em;
+  }
+  
+  .riddle2 .snitch .obj .wing {
+    position: absolute;
+    text-align: right;
+    line-height: 0;
+    top: -60%;
+    left: -175%;
+    width: 200%;
+    height: 90%;
+    transform-origin: bottom right;
+  }
+  
+  .riddle2 .snitch .obj .r.wing {
+    text-align: left;
+    left: auto;
+    right: -300%;
+    transform-origin: bottom left;
+  }
+  
+  .riddle2 #animate:checked + label .snitch .obj .wing {
+    animation: flap-left ease-in-out 0.3s infinite;
+  }
+  
+  .riddle2 #animate:checked + label .snitch .obj .r.wing {
+    animation: flap-right ease-in-out 0.3s infinite;
+  }
+  
+  .riddle2 .snitch .obj .wing .feather {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    margin-top: -1px;
+    background: #fdfce6;
+    border: solid 0.42em #3c2e2d;
+    border-width: 0.62em;
+    border-radius: 0 2em 0 2em;
+  }
+  
+  .riddle2 .snitch .obj .wing .feather:nth-child(2) {
+    height: 33%;
+    width: 85%;
+    border-top: none;
+    border-radius: 0 0 0 2em;
+  }
+  
+  .riddle2 .snitch .obj .wing .feather:nth-child(3) {
+    height: 33%;
+    width: 70%;
+    border-radius: 0 0 0 2em;
+    border-top: none;
+  }
+  
+  .riddle2 .snitch .obj .r.wing .feather {
+    border-radius: 0 0 2em 0;
+  }
+  
+  .riddle2 .snitch .obj .r.wing .feather:nth-child(1) {
+    border-radius: 2em 0 2em 0;
+  }
+  
+  .riddle2 .snitch .shadow {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 0%);
+    height: 0;
+    width: 0;
+    background: #3c2e2d;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all ease 0.5s;
+  }
+  
+  .riddle2 #animate:checked + label .snitch .shadow {
+    opacity: .65;
+    height: 10%;
+    left: calc(50% - 25%);
+    width: 50%;
+    animation: shadow-hover ease-in-out 1.5s infinite;
+  }
+  
+  @keyframes flap-left {
+    50% {
+      transform: rotate(-40deg) scaley(0.6);
+    }
+  }
+  @keyframes flap-right {
+    50% {
+      transform: rotate(40deg) scaley(0.6);
+    }
+  }
+  @keyframes hover {
+    50% {
+      transform: translatey(-1.2em);
+    }
+  }
+  @keyframes shadow-hover {
+    50% {
+      transform: scale(1.1);
+      opacity: .5;
+    }
+  }
+  @media (max-width: 750px) {
+    .riddle1 .snitch {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .riddle2 .snitch .obj .body, .snitch .obj .wing .feather, .snitch .obj .joint {
+      border-width: 0.4em;
+    }
+  
+    .riddle2 .snitch .obj .body .flourish {
+      border: solid 0.42em #3c2e2d;
+      border-width: 0.3em;
+    }
+  
+    .riddle2 .snitch .obj .body .flourish .line {
+      height: 0.3em;
+    }
+  }
+   .riddle1, .riddle2, .riddle3, .riddle4{
+    position: relative;
+    text-align: center;
+    display: none;
+  } 
+
+  #animate{
+    display: none;
+  }
+
+  .paratext{
+    position: relative;
+    font-size: 1.2vw;
+    color: black;
+    top: 50%;
+    left: 52%;
+    transform: translate(-55%, 40%);
+  }
+  input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 4em -1em;
+    font: 400 13.3333px Arial;
+    padding: 2px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+
+.paratext span{
+  color: red;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+}
+
+button {
+  color: #fff;
+  background-color: #000;
+}
+
+.popup-cor, .popup-wro, .popup-time {
+  position: fixed;
+  display: none;
+  z-index: 5000;
+  width: 500px;
+  height: 300px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  border: 5px solid rgba(255,255,255,0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.link1, .link2, .link3{
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+.link1{background-color: green;}
+.link2{background-color: red;}
+.link3{
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+}
+  /********************MEDIA QUERIES*********************/
+  
+  @media(max-width: 768px){
+    .nav-item{
+      text-align: center!important;
+    }
+  }
+  
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+      .DOORS, .RIDDLES { width:67%; }
+      .heading { width:30%; margin-left:3%;}  
+  }
+  
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+      .DOORS, .RIDDLES { width:100%; }
+      .door1, .door2, .door3, .door4 {
+        margin-left: 100px;
+      }
+      .door1 {
+        margin-top: 100px;
+      }
+      .door2 {
+        margin-top: 400px;
+      }
+      .door3 {
+        margin-top: 700px;
+      }
+      .door4 {
+        margin-top: 1000px;
+      }
+      .heading { width:100%; margin:0; border:none; }
+      img{
+        width: 400px;
+        height: 500px;
+        margin-top: 50%;
+        position: relative;
+      }
+      .paratext{
+        position: relative;
+        font-size: 0.8rem;
+        top: 55%;
+        left: 52%;
+        transform: translate(-20%, -90%);
+      }
+  }
+  
+  img { max-width: 100%; height: auto; }
+  
+  @media (min-device-width:600px) {
+      img[data-src-600px] {
+          content: attr(data-src-600px, url);
+      }
+  }
+  
+  @media (min-device-width:800px) {
+      img[data-src-800px] {
+          content: attr(data-src-800px, url);
+      }
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe,  
+  .video-container object,  
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (min-width: 640px) { body {font-size:1rem;} } 
+  @media (min-width:960px) { body {font-size:1.2rem;} } 
+  @media (min-width:1100px) { body {font-size:1.5rem;} } 
+  
+  
+  

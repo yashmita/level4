@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Wizards Unite</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://www.innerve-igdtuw.com/innerve_logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="final.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+  <div class="heading">
+    
+    <h1>LEVEL : 4</h1>
+    <h2>CHOOSE THE DOOR TO TRIWIZARD CUP!</h2>  
+    
+  </div>
+
+ <!--  **************AUDIO****************** -->
+
+ <audio id="myAudio">
+   <source src="close_door.wav" type="audio/wav">
+ </audio>
+
+  <!-- ***********************DOORS********************** -->
+  <div class="DOORS">
+
+    <!-- **************door1****************** -->
+
+    <div class="door1">
+      <img src="door1.jpg" alt="door1">
+    </div> 
+
+    <!-- **************door2****************** -->
+
+    <div class="door2">
+      <img src="door2.jpg" alt="door2">
+    </div>  
+
+    <!-- **************door3****************** -->
+
+    <div class="door3">
+      <img src="door3.jpg" alt="door3">
+    </div>
+
+    <!-- **************door4****************** -->
+
+    <div class="door4">
+        <img src="door4.jpg" alt="door4">
+    </div>
+
+  </div>
+
+  <!-- ***********************RIDDLES************************** -->
+
+  <div class="RIDDLES">
+
+  <!-- ***************riddle1********************* -->
+
+  <div class="riddle1">       
+    <input type="checkbox" name="checkbox" id="animate" checked>
+    <label for='animate'>
+      <div class='snitch'>
+        <div class='obj'>
+          <div class='body'>
+            <div>
+                <div class="paratext">
+                  <span id="timer1"></span>
+                  <p><strong>Here we are, Harry Potter! <br> Under the water. <br> You saved Ron, also wanted Hermoine. <br> Too much moral fiber, oh blimey!
+                      <br>Now that you're here and you could breathe,<br> Can you tell me what did you eat? <br> What am I?</strong></p>    
+                  <input type="text" name="answer" id="answer1" placeholder="Answer" /required>
+                  <button onclick="validate1()">SUBMIT</button>
+                </div>
+              </div>
+          </div>
+          <div class='l joint'></div>
+          <div class='l wing'>
+            <div class='feather'></div>
+            <div class='feather'></div>
+            <div class='feather'></div>
+          </div>
+          <div class='r joint'></div>
+          <div class='r wing'>
+            <div class='feather'></div>
+            <div class='feather'></div>
+            <div class='feather'></div>
+          </div>
+        </div>
+        <div class='shadow'></div>
+      </div>
+    </label>
+    </div>
+
+    <!-- ***************riddle2********************* -->
+    <div class="riddle2">       
+      <input type="checkbox" name="checkbox" id="animate" checked>
+      <label for='animate'>
+        <div class='snitch'>
+          <div class='obj'>
+            <div class='body'>
+              <div>
+                  <div class="paratext">
+                  <span id="timer2"></span>
+                  <p><strong>Could be a kettle <br> could be an old shoe, <br> Touch it, that's all you got to do. <br> You'll fly in a whirlwind of colors and sound
+                  <br> And what you see is an unfamiliar ground. <br> Finally, you'll land on your feet, <br> By touching the things that are obsolete <br>   What am I?</strong></p>
+                  <input type="text" name="answer" id="answer2" placeholder="Answer" /required>
+                  <button onclick="validate2()">SUBMIT</button>
+                  </div>
+                </div>
+            </div>
+            <div class='l joint'></div>
+            <div class='l wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+            <div class='r joint'></div>
+            <div class='r wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+          </div>
+          <div class='shadow'></div>
+        </div>
+      </label>
+      </div>
+
+    <!-- ***************riddle3********************* -->
+    <div class="riddle3">       
+      <input type="checkbox" name="checkbox" id="animate" checked>
+      <label for='animate'>
+        <div class='snitch'>
+          <div class='obj'>
+            <div class='body'>
+              <div>
+                  <div class="paratext">
+                    <span id="timer3"></span>
+                    <p><strong> I roam the woods of <br> Hogwarts school <br> And my coat is a lovely white, <br> But don't you dare, try to drink my blood <br> Or you'll be cursed for life.
+                      <br>     Who am I?</strong></p>
+                  <input type="text" name="answer" id="answer3" placeholder="Answer" /required>
+                  <button onclick="validate3()">SUBMIT</button>
+                  </div>
+                </div>
+            </div>
+            <div class='l joint'></div>
+            <div class='l wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+            <div class='r joint'></div>
+            <div class='r wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+          </div>
+          <div class='shadow'></div>
+        </div>
+      </label>
+      </div>
+
+    <!-- ***************riddle4********************* -->
+    <div class="riddle4">       
+      <input type="checkbox" name="checkbox" id="animate" checked>
+      <label for='animate'>
+        <div class='snitch'>
+          <div class='obj'>
+            <div class='body'>
+              <div>
+                  <div class="paratext">
+                  <span id="timer4"></span>               
+                  <p><strong> I was the pride of those <br> who owned me <br> and a murder sealed my fate <br> for years my true identity went unknown<br> 
+                  and my end was brought by the one <br> who stopped me from finishing off my foe <br>    Who am I?</strong></p>
+                  <input type="text" name="answer" id="answer4" placeholder="Answer" /required>
+                  <button onclick="validate4()">SUBMIT</button>
+                  </div>
+                </div>
+            </div>
+            <div class='l joint'></div>
+            <div class='l wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+            <div class='r joint'></div>
+            <div class='r wing'>
+              <div class='feather'></div>
+              <div class='feather'></div>
+              <div class='feather'></div>
+            </div>
+          </div>
+          <div class='shadow'></div>
+        </div>
+      </label>
+      </div>
+  </div>
+
+  <!-- *************POPUPS******************** -->
+
+  <html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+<!-- 
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%64%69%76%20%63%6c%61%73%73%3d%22%70%6f%70%75%70%2d%63%6f%72%22%20%69%64%3d%22%63%6f%72%22%3e%5c%6e%20%20%20%20%20%20%20%20%3c%68%32%3e%43%6f%72%72%65%63%74%21%3c%2f%68%32%3e%5c%6e%20%20%20%20%20%20%20%20%3c%70%3e%57%65%6c%6c%20%44%6f%6e%65%21%3c%62%72%3e%3c%73%74%72%6f%6e%67%3e%43%4c%55%45%3a%3c%2f%73%74%72%6f%6e%67%3e%20%54%68%69%73%20%69%73%20%79%6f%75%72%20%63%6c%75%65%2e%3c%62%72%3e%4b%69%6e%64%6c%79%20%63%6c%69%63%6b%20%74%68%65%20%62%65%6c%6f%77%20%62%75%74%74%6f%6e%20%74%6f%20%73%6f%6c%76%65%20%61%20%63%6f%64%69%6e%67%20%71%75%65%73%74%69%6f%6e%2e%3c%2f%70%3e%5c%6e%20%20%20%20%20%20%20%20%3c%61%20%68%72%65%66%3d%22%68%74%74%70%73%3a%2f%2f%77%77%77%2e%68%61%63%6b%65%72%72%61%6e%6b%2e%63%6f%6d%2f%64%75%6d%6d%79%2d%63%6f%6e%74%65%73%74%2d%34%2d%31%22%3e%3c%62%75%74%74%6f%6e%20%63%6c%61%73%73%3d%22%6c%69%6e%6b%31%22%3e%43%6c%69%63%6b%20%48%65%72%65%3c%2f%62%75%74%74%6f%6e%3e%3c%2f%61%3e%5c%6e%20%20%3c%2f%64%69%76%3e%5c%6e%20%20%3c%64%69%76%20%63%6c%61%73%73%3d%22%70%6f%70%75%70%2d%77%72%6f%22%20%69%64%3d%22%77%72%6f%22%3e%5c%6e%20%20%20%20%20%20%20%20%3c%68%32%3e%49%6e%63%6f%72%72%65%63%74%21%3c%2f%68%32%3e%5c%6e%20%20%20%20%20%20%20%20%3c%70%3e%55%6e%66%6f%72%74%75%6e%61%74%65%6c%79%2c%20%79%6f%75%20%77%6f%6e%5c%27%74%20%67%65%74%20%61%20%63%6c%75%65%2e%3c%62%72%3e%4b%69%6e%64%6c%79%20%63%6c%69%63%6b%20%74%68%65%20%62%65%6c%6f%77%20%62%75%74%74%6f%6e%20%74%6f%20%73%6f%6c%76%65%20%61%20%63%6f%64%69%6e%67%20%71%75%65%73%74%69%6f%6e%2e%3c%2f%70%3e%3c%62%72%3e%5c%6e%20%20%20%20%20%20%20%20%3c%61%20%68%72%65%66%3d%22%68%74%74%70%73%3a%2f%2f%77%77%77%2e%68%61%63%6b%65%72%72%61%6e%6b%2e%63%6f%6d%2f%64%75%6d%6d%79%2d%63%6f%6e%74%65%73%74%2d%34%2d%31%22%3e%3c%62%75%74%74%6f%6e%20%63%6c%61%73%73%3d%22%6c%69%6e%6b%32%22%3e%43%6c%69%63%6b%20%48%65%72%65%3c%2f%62%75%74%74%6f%6e%3e%3c%2f%61%3e%5c%6e%20%20%3c%2f%64%69%76%3e%5c%6e%20%20%3c%64%69%76%20%63%6c%61%73%73%3d%22%70%6f%70%75%70%2d%74%69%6d%65%22%20%69%64%3d%22%74%69%6d%65%22%3e%5c%6e%20%20%20%20%20%20%20%20%3c%68%32%3e%54%69%6d%65%5c%27%73%20%75%70%21%3c%2f%68%32%3e%5c%6e%20%20%20%20%20%20%20%20%3c%70%3e%55%6e%66%6f%72%74%75%6e%61%74%65%6c%79%2c%20%79%6f%75%20%72%61%6e%20%6f%75%74%20%6f%66%20%74%69%6d%65%2e%3c%62%72%3e%4b%69%6e%64%6c%79%20%63%6c%69%63%6b%20%74%68%65%20%62%65%6c%6f%77%20%62%75%74%74%6f%6e%20%74%6f%20%73%6f%6c%76%65%20%61%20%63%6f%64%69%6e%67%20%71%75%65%73%74%69%6f%6e%2e%3c%2f%70%3e%3c%62%72%3e%5c%6e%20%20%20%20%20%20%20%20%3c%61%20%68%72%65%66%3d%22%68%74%74%70%73%3a%2f%2f%77%77%77%2e%68%61%63%6b%65%72%72%61%6e%6b%2e%63%6f%6d%2f%64%75%6d%6d%79%2d%63%6f%6e%74%65%73%74%2d%34%2d%31%22%3e%3c%62%75%74%74%6f%6e%20%63%6c%61%73%73%3d%22%6c%69%6e%6b%33%22%3e%43%6c%69%63%6b%20%48%65%72%65%3c%2f%62%75%74%74%6f%6e%3e%3c%2f%61%3e%5c%6e%20%20%3c%2f%64%69%76%3e%27%29%3b'));
+// -->
+</script>
+<noscript><i>Javascript required</i></noscript>
+
+</html>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="final_enc.js"></script>
+
+</body>
+</html>
