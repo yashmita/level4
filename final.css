@@ -777,7 +777,7 @@ body{
     color: black;
     top: 50%;
     left: 52%;
-    transform: translate(-55%, 40%);
+    transform: translate(-55%, 45%);
   }
   input {
     -webkit-writing-mode: horizontal-tb !important;
